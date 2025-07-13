@@ -32,7 +32,7 @@ body{
     text-decoration: none;
     color: #0948f0;
     font-weight: bold;
-    position: relative; /*necessario para criar um traço depois*/
+    position: relative; 
     padding: 5px 0;
 }
 
@@ -104,7 +104,7 @@ body{
     display: flex;
     justify-content: flex-end;
     position: relative;
-    padding-left: 50px; /* um espaço para não grudar no texto */
+    padding-left: 50px; 
     box-sizing: border-box;
     overflow: visible;
   }
@@ -119,8 +119,8 @@ body{
     width: 690px;
     height: 450px;
     position: relative;
-    right: -18%; /* move o quadrado para fora da tela! ajuste o valor aqui */
-    top: -30px; /* NOVO: sobe o quadrado! ajuste o valor conforme quiser */
+    right: -18%;
+    top: -30px; 
     z-index: 1;
     overflow: visible;
   }
@@ -264,10 +264,6 @@ body{
     top: 15px;
   }
 
-
-
-
-
   .wave-top {
     position: absolute;
     top: 0;
@@ -298,7 +294,7 @@ body{
     position: relative;
     padding-top: 10%;
     text-align: center;
-    padding-bottom: 2%; /* espaço para a onda de baixo */
+    padding-bottom: 2%; 
   }
   
   .pets-section h2 {
@@ -454,6 +450,23 @@ body{
   gap: 15px;
 }
 
+.faq-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-line {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-line:last-child {
+  border-bottom: none;
+}
+
 .faq-item {
   background: white;
   border-radius: 12px;
@@ -470,34 +483,218 @@ body{
 
 .faq-question {
   cursor: pointer;
-  padding: 16px 20px;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #3c5dd8;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .faq-question:hover {
-  background: #f0f2ff;
+  background-color: #f5f6ff;
 }
 
 .icon {
   transition: transform 0.3s ease;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .faq-answer {
-  padding: 0 20px;
+  padding: 0 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
   background: #f5f6ff;
-  color: #333;
+  color: #555;
   font-size: 14px;
 }
 
 .faq-answer.open {
   padding: 16px 20px;
+}
+
+.contato {
+  background-image: url('imagens/fundo3.jpeg');
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 120px 20px;
+}
+
+/* O fundo azul translúcido por cima */
+.contato-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(81, 104, 212, 0.8); 
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.form-box {
+  background: #fff7e5;
+  border-radius: 20px;
+  padding: 40px;
+  z-index: 2;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  left: 20px;
+}
+
+.form-box h2 {
+  color: #2d3db0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-box p {
+  color: #5e5e5e;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input,
+textarea,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-check {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.form-check input {
+  margin-right: 8px;
+}
+
+.form-check a {
+  color: #2d3db0;
+  text-decoration: underline;
+}
+
+button {
+  background: #ff7675;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e85b5b;
+}
+
+.wave-top2 {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+  }
+
+.wave-bottom2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    transform: rotate(180deg); /* espelha a onda */
+    z-index: 1;
+  }
+  
+.footer{
+  background-color: #0948f0;
+  color: white;
+  position: relative;
+  padding: 10px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left img.footer-icon {
+  width: 40px;
+}
+
+.footer-center {
+  text-align: center;
+  margin-right: -10%;
+}
+
+.footer-center h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-right a img {
+  width: 20px;
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-right a:hover img {
+  transform: scale(1.2);
 }
