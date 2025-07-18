@@ -15,7 +15,10 @@
             <li><a href="#">Animais</a></li>
             <li><a href="#">FAQ</a></li>
         </ul>
-        <button class="contact-button">Contatos</button>
+        <button class="contact-button">
+          <span>Contatos</span>
+          <img src="imagens/paper.png" alt="contato">
+        </button>
     </nav>
     <section class="hero">
         <!-- texto da esquerda -->
@@ -30,26 +33,29 @@
           <div class="image-background">
             <img class="animal-cat" src="imagens/cat.png" alt="">
             <img class="animal-dog" src="imagens/dog.png" alt="">
-        </div>
+          </div>
         </div>
     </section>
 
     <!-- metricas dentro do texto --> 
     <div class="metrics">
        <div class="metrics-item">
-           <h2>155+</h2>
-           <p>Animais de estimação disponíveis</p>
+           <h2>115+</h2>
+           <p>Pets <br> Disponíveis</p>
        </div>
+       <div class="separador"></div>
+
        <div class="metrics-item">
            <h2>58+</h2>
-           <p>Correspondências feitas</p>
-        </div>
-        <div class="metrics-item">
-            <h2>173+</h2>
-            <p>Animais salvos</p>
-        </div>
-        </div>
-        </div>
+           <p>Conexões <br> Realizadas</p>
+       </div>
+       <div class="separador"></div>
+
+       <div class="metrics-item">
+          <h2>173+</h2>
+          <p>Animais <br> salvos</p>
+       </div>
+    </div>
 
     <section class="how-it-works">
         <p class="subtitle">O processo é dividido em três etapas fáceis</p>
@@ -92,8 +98,6 @@
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
               <path d="M0,32 C360,100 1080,0 1440,64 L1440,0 L0,0 Z" fill="#fdf5e5"></path>
             </svg>
-        </div>
-
         </div>
 
         <h2>Como são nossos animais de estimação</h2>
@@ -149,8 +153,10 @@
                 </ul>
             </div>
         </div>
-
+        <div class="see-all-container">
         <a href="#" class="see-all">Ver tudo</a>
+        <img src="imagens/lupa.png" alt="lupa" class="icon-lupa">
+        </div>
     </section>
 <div class="wave-bottom">
             <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
@@ -273,12 +279,15 @@
             </select>
           </div>
 
-          <div>
+          <div class="form-check">
             <input type="checkbox" id="termos" required>
             <label for="termos">Concordo com os <a href="#">termos e condições</a>.</label>
           </div>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" class="form-botao">
+            <span>Enviar</span>
+            <img src="imagens/patas.png" alt="patas">
+          </button>
       </form>
     </div>
 

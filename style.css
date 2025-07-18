@@ -51,9 +51,20 @@ body{
     background-color: #0948f0;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 25px;
     cursor: pointer;
+    text-align: right;
+    display: inline-block;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+}
+
+.contact-button img{
+  width: 12px;
+  height: 12px;
 }
 
 .hero{
@@ -146,30 +157,47 @@ body{
 
 .metrics {
   background-color: #0948f0;
-  color: white;
   display: flex;
-  justify-content: space-around;
-  padding: 25px 0;
-  margin-top: -10%;
+  justify-content: center;
+  padding: 22px 0;
   text-align: center; 
   width: 100%;
   z-index: 2;
   position: absolute;
   bottom: -30px;
+  gap: 8%;
   }
   
+.metrics-item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
   .metrics-item h2 {
-    font-size: 30px;
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    color: #8dc2fd;
+    font-weight: 900;
   }
   
   .metrics-item p {
     font-size: 18px;
     margin-top: 10px;
+    color: white;
+    text-align: left;
+  }
+
+  .separador {
+    width: 1px;
+    height: 50px;
+    background-color: #8dc2fd;
+    margin-top: 13px;
   }
 
   .how-it-works {
     margin-top: 80px;
-    padding: 40px 90px;
+    padding: 30px 90px;
     text-align: center;
   }  
 
@@ -177,7 +205,7 @@ body{
     font-weight: 300;
     color: #6e80d5;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .title {
@@ -191,22 +219,23 @@ body{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 30px;
     margin-bottom: 40px;
     align-items: center;
   }
 
   .step {
-    max-width: 200px;
+    max-width: 250px;
     text-align: center;
   }
 
   
   .step h3 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: #1C3BFF;
     margin-bottom: 10px;
+    border-bottom: 2px solid #feb6b7;
+    display: inline-block;
   }
   
   .step p {
@@ -250,12 +279,12 @@ body{
   }
   
   .pegada.esquerda {
-    left: 40%;
+    left: 35%;
     top: 15px;
   }
   
   .pegada.centro {
-    left: 49%;
+    left: 48%;
     top: 3;
   }
   
@@ -315,17 +344,18 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
+
   }
   
   .card {
     background-color: #fff;
-    width: 220px;
+    width: 250px;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    padding: 20px;
     text-align: left;
     transition: transform 0.2s;
+    overflow: hidden;
   }
   
   .card:hover {
@@ -334,26 +364,30 @@ body{
   
   .card img {
     width: 100%;
-    border-radius: 10px;
+    height: 160px;
     margin-bottom: 15px;
+    object-fit: cover;
   }
   
   .card .type {
     font-size: 12px;
     font-weight: bold;
     color: #1d2ec6;
+     margin: 10px 15px 0;
   }
   
   .card h3 {
     margin: 8px 0;
     font-size: 18px;
     color: #1d2ec6;
+    margin: 5px 15px;
   }
   
   .card p {
     font-size: 14px;
     color: #1d2ec6;
     margin-bottom: 10px;
+    margin: 10px 15px;
   }
   
   .card ul {
@@ -361,15 +395,27 @@ body{
     padding-left: 18px;
     font-size: 13px;
     color: #1d2ec6;
+    margin: 10px 15px 15px;
   }
   
+  .see-all-container {
+    text-align: right;
+    padding-right: 7%;
+  }
+
   .see-all {
-    display: inline-block;
+    display: inline-flex;
     margin-top: 40px;
     font-size: 14px;
     color: #1d2ec6;
     font-weight: bold;
     text-decoration: none;
+    border-bottom: 2px solid;
+  }
+
+  .icon-lupa {
+  width: 20px;
+  height: 20px;
   }
 
  .perguntas{
@@ -467,20 +513,6 @@ body{
   border-bottom: none;
 }
 
-.faq-item {
-  background: white;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
-
-.faq-item p {
-  font-size: 14px;
-  color: #4f5c7b;
-  margin-top: 5px;
-}
-
 .faq-question {
   cursor: pointer;
   padding: 15px 0;
@@ -502,11 +534,10 @@ body{
 }
 
 .faq-answer {
-  padding: 0 0;
+  margin-bottom: 2px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
-  background: #f5f6ff;
   color: #555;
   font-size: 14px;
 }
@@ -550,13 +581,13 @@ body{
 }
 
 .form-box h2 {
-  color: #2d3db0;
+  color: #1d2ec6;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .form-box p {
-  color: #5e5e5e;
+  color: #6e80d5;
   text-align: center;
   margin-bottom: 30px;
   font-size: 14px;
@@ -579,6 +610,7 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 14px;
+  color: #1d2ec6;
 }
 
 input,
@@ -601,29 +633,35 @@ textarea {
 }
 
 .form-check input {
-  margin-right: 8px;
+  margin-right: 2px;
+  
 }
 
 .form-check a {
   color: #2d3db0;
-  text-decoration: underline;
 }
 
-button {
+.form-botao img{
+  width: 12px;
+  height: 12px;
+}
+
+.form-botao {
   background: #ff7675;
-  color: white;
-  padding: 12px 24px;
+  color: #0948f0;
+  padding: 10px 25px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
   transition: background-color 0.3s;
+  display: inline-block;
+  align-items: center;
+  display: flex;
+  text-align: right;
 }
 
-button:hover {
+.form-botao:hover {
   background-color: #e85b5b;
 }
 
